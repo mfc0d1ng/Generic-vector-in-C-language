@@ -39,7 +39,7 @@ int main()
        element in integers */
     int* integers_it = vector_begin(&integers);
     
-    /* Print contents on integers */
+    /* Print contents of integers */
     printf("Vector integers contains: ");
     for (size_t i = 0; i < integers.size; i++)
     {
