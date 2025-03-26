@@ -53,3 +53,46 @@ int main()
 }
 </code>
 </pre>
+
+
+* Example B:
+
+<pre>
+<code class="language-c">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include "vector.h"
+
+int sort_fruits_predicate(const void* __ls, const void* __rs)
+{
+    return strcmp(*(const char **)__ls, *(const char **)__rs) > 0;
+}
+
+int main()
+{
+    /* Construct fruits */
+    vector fruits = vector_new(const char *);
+
+    vector_push_back(const char *, &fruits, "strawberry");
+    vector_push_back(const char *, &fruits, "apple");
+    vector_push_back(const char *, &fruits, "banana");
+    vector_push_back(const char *, &fruits, "pineapple");
+
+    /* Sort fruits in ascending order */
+    vector_sort(&fruits, sort_fruits_predicate);
+
+    /* Print contents of fruits */
+    printf("Vector fruits after sorting: ");
+    for (size_t i = 0; i < fruits.size; i++)
+    {
+        printf("%s ", vector_at(const char *, &fruits, i));
+    }
+
+    /* Erase fruits */
+    vector_destructor(&fruits);
+
+    return EXIT_SUCCESS;
+}
+</code>
+</pre>
