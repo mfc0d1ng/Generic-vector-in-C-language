@@ -74,6 +74,7 @@ int main()
     /* Construct fruits */
     vector fruits = vector_new(const char *);
 
+    /* Add fruits to vector fruits */
     vector_push_back(const char *, &fruits, "strawberry");
     vector_push_back(const char *, &fruits, "apple");
     vector_push_back(const char *, &fruits, "pineapple");
