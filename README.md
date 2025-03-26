@@ -76,8 +76,8 @@ int main()
 
     vector_push_back(const char *, &fruits, "strawberry");
     vector_push_back(const char *, &fruits, "apple");
-    vector_push_back(const char *, &fruits, "banana");
     vector_push_back(const char *, &fruits, "pineapple");
+    vector_push_back(const char *, &fruits, "banana");
 
     /* Sort fruits in ascending order */
     vector_sort(&fruits, sort_fruits_predicate);
