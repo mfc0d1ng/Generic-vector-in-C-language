@@ -9,4 +9,4 @@ You can download it here <a href="https://github.com/user-attachments/files/1946
 
  <h2>How to link?</h2>
  You can link the library to your C project as follows: gcc example.c -l vector <br>
-And don't forget to include vector.h, note that linked_list.h depends on vector_details.h so keep both in the same directory.
+And don't forget to include vector.h, note that vector.h depends on vector_details.h so keep both in the same directory.
