@@ -10,3 +10,46 @@ You can download it here <a href="https://github.com/user-attachments/files/1946
  <h2>How to link?</h2>
  You can link the library to your C project as follows: gcc example.c -l vector <br>
 And don't forget to include vector.h, note that vector.h depends on vector_details.h so keep both in the same directory.
+<br>
+<h2> Examples </h2>
+
+* Example A:
+
+<pre>
+<code class="language-c">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include "vector.h"
+
+int main()
+{
+    /* Construct integers */
+    vector integers = vector_new(int);
+
+    for (size_t i = 101; i < 110; i++)
+    {
+        /* Add data to integers */
+        vector_push_back(int, &integers, i);
+    }
+
+    /* Insert 100 at the beginning of integers */
+    vector_insert(int, &integers, vector_begin(&integers), 100);
+    
+    /* Getting iterator that points to the first 
+       element in integers */
+    int* integers_it = vector_begin(&integers);
+    
+    /* Print contents on integers */
+    printf("Vector integers contains: ");
+    for (size_t i = 0; i < integers.size; i++)
+    {
+        printf("%i ", integers_it[i]);
+    }
+
+    /* Erase integers */
+    vector_destructor(&integers);
+    
+    return EXIT_SUCCESS;
+}
+</code>
+</pre>
