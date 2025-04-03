@@ -64,7 +64,7 @@ int main()
 #include &lt;string.h&gt;
 #include "vector.h"
 
- /* Sort predicate */
+/* Sort predicate */
 int sort_fruits_predicate(const void* __ls, const void* __rs)
 {
     return strcmp(*(const char **)__ls, *(const char **)__rs) > 0;
