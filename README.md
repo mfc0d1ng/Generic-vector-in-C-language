@@ -5,10 +5,10 @@
 You can download it here <a href="https://github.com/user-attachments/files/19589771/libvec.zip">here</a>
 
 <h2>How to install?</h2>
- Unzip the downloaded file and move libvector.so to /usr/lib
+ Unzip the downloaded file and move libvec.so to /usr/lib
 
  <h2>How to link?</h2>
- You can link the library to your C project as follows: gcc example.c -l vector <br>
+ You can link the library to your C project as follows: gcc example.c -l vec <br>
 And don't forget to include vector.h, note that vector.h depends on vector_details.h so keep both in the same directory.
 <br>
 <h2> Examples </h2>
