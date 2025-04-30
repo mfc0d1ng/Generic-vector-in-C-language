@@ -81,7 +81,7 @@ int main()
     vector_push_back(const char*, &fruits, "banana");
 
     /* Sort fruits in ascending order */
-    vector_sort(&fruits, sort_fruits_predicate);
+    vector_sort(const char*, &fruits, sort_fruits_predicate);
 
     /* Print contents of fruits */
     printf("Vector fruits after sorting: ");
