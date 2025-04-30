@@ -1,15 +1,14 @@
 # Generic vector in C language
- A shared library which provides a set of functions for handling dynamic arrays in C. Note that the library doesn't provide methods for constructing and copying the vector elements because C isn't object-oriented programming language. User is responsible for constructing and copying the vector elements.
+A shared library which provides a set of functions for handling dynamic arrays in C. Note that the library doesn't provide methods for constructing and copying the vector elements because C isn't object-oriented programming language. User is responsible for constructing and copying the vector elements.
 
 <h2>How to download?</h2>
-You can download it here <a href="https://github.com/user-attachments/files/19917411/libvec.zip">here</a>
+You can download it here <a href="https://github.com/user-attachments/files/19984427/libvec.zip">here</a>
 
 <h2>How to install?</h2>
  Unzip the downloaded file and move libvec.so to /usr/lib
 
  <h2>How to link?</h2>
- You can link the library to your C project as follows: gcc example.c -l vec <br>
-And don't forget to include vector.h, note that vector.h depends on vector_details.h so keep both in the same directory.
+ You can link the library to your C project as follows: gcc example.c -l vec
 <br>
 <h2> Examples </h2>
 
@@ -24,7 +23,7 @@ And don't forget to include vector.h, note that vector.h depends on vector_detai
 int main()
 {
     /* Construct integers */
-    vector integers = vector_new(int);
+    vector integers = vector_new();
 
     for (size_t i = 101; i < 110; i++)
     {
@@ -33,11 +32,11 @@ int main()
     }
 
     /* Insert 100 at the beginning of integers */
-    vector_insert(int, &integers, vector_begin(&integers), 100);
+    vector_insert(int, &integers, vector_begin(int, &integers), 100);
     
     /* Getting iterator that points to the first 
        element in integers */
-    int* integers_it = vector_begin(&integers);
+    int* integers_it = vector_begin(int, &integers);
     
     /* Print contents of integers */
     printf("Vector integers contains: ");
@@ -73,13 +72,13 @@ int sort_fruits_predicate(const void* __ls, const void* __rs)
 int main()
 {
     /* Construct fruits */
-    vector fruits = vector_new(const char *);
+    vector fruits = vector_new();
 
     /* Add fruits to vector fruits */
-    vector_push_back(const char *, &fruits, "strawberry");
-    vector_push_back(const char *, &fruits, "apple");
-    vector_push_back(const char *, &fruits, "pineapple");
-    vector_push_back(const char *, &fruits, "banana");
+    vector_push_back(const char*, &fruits, "strawberry");
+    vector_push_back(const char*, &fruits, "apple");
+    vector_push_back(const char*, &fruits, "pineapple");
+    vector_push_back(const char*, &fruits, "banana");
 
     /* Sort fruits in ascending order */
     vector_sort(&fruits, sort_fruits_predicate);
@@ -88,7 +87,7 @@ int main()
     printf("Vector fruits after sorting: ");
     for (size_t i = 0; i < fruits.size; i++)
     {
-        printf("%s ", vector_at(const char *, &fruits, i));
+        printf("%s ", vector_at(const char*, &fruits, i));
     }
 
     /* Erase fruits */
