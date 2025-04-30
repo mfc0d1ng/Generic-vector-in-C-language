@@ -85,13 +85,13 @@ int main()
 
     /* Print contents of fruits */
     printf("Vector fruits after sorting: ");
-    for (size_t i = 0; i < fruits.size; i++)
+    for (size_t i = 0; i < fruits->size; i++)
     {
         printf("%s ", vector_at(const char*, fruits, i));
     }
 
     /* Erase fruits */
-    vector_delete(&fruits);
+    vector_delete(fruits);
 
     return EXIT_SUCCESS;
 }
