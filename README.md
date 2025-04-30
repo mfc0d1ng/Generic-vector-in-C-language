@@ -72,26 +72,26 @@ int sort_fruits_predicate(const void* __ls, const void* __rs)
 int main()
 {
     /* Construct fruits */
-    vector fruits = vector_new();
+    vector* fruits = vector_object();
 
     /* Add fruits to vector fruits */
-    vector_push_back(const char*, &fruits, "strawberry");
-    vector_push_back(const char*, &fruits, "apple");
-    vector_push_back(const char*, &fruits, "pineapple");
-    vector_push_back(const char*, &fruits, "banana");
+    vector_push_back(const char*, fruits, "strawberry");
+    vector_push_back(const char*, fruits, "apple");
+    vector_push_back(const char*, fruits, "pineapple");
+    vector_push_back(const char*, fruits, "banana");
 
     /* Sort fruits in ascending order */
-    vector_sort(const char*, &fruits, sort_fruits_predicate);
+    vector_sort(const char*, fruits, sort_fruits_predicate);
 
     /* Print contents of fruits */
     printf("Vector fruits after sorting: ");
     for (size_t i = 0; i < fruits.size; i++)
     {
-        printf("%s ", vector_at(const char*, &fruits, i));
+        printf("%s ", vector_at(const char*, fruits, i));
     }
 
     /* Erase fruits */
-    vector_destructor(&fruits);
+    vector_delete(&fruits);
 
     return EXIT_SUCCESS;
 }
