@@ -46,7 +46,7 @@ int main()
     }
 
     /* Erase integers */
-    vector_destructor(&integers);
+    vector_destroy(&integers);
     
     return EXIT_SUCCESS;
 }
