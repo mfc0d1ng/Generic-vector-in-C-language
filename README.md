@@ -5,7 +5,7 @@ A shared library which provides a set of functions for handling dynamic arrays i
 You can download it here <a href="https://github.com/user-attachments/files/21941509/libvector.zip">here</a>
 
 <h2>How to install?</h2>
- Unzip the downloaded file and move libvec.so to /usr/lib
+ Unzip the downloaded file and move libvector.so to /usr/lib
 
  <h2>How to link?</h2>
  You can link the library to your C project as follows: gcc example.c -l vector
